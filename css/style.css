@@ -3,7 +3,7 @@
 
 :root {
     --clr-white: #ffffff;
-    --clr-dark: #0000005b;
+    --clr-dark: #020000bd;
     --font-Kantumruy:'Kantumruy Pro', sans-serif;
    }
 
@@ -18,7 +18,7 @@ body {
     font-family: var(--font-Kantumruy);
     font-size: var(--fs-400);
     color: hsl(var(--clr-white));
-    background-color: #020000bd;
+    background-color: var(--clr-dark);
     line-height: 1.5;
     min-height: 100vh;
 
@@ -58,7 +58,7 @@ body {
 
 @supports (backdrop-filter: blur(1rem)) {
     .primary-navigation{
-        background: hsl(0 0% 100% / 0.1);
+        background: hsl(0 0% 100% / 0.01);
         backdrop-filter: blur(1rem);
     }
 }
@@ -89,7 +89,7 @@ body {
         padding: min(30vh, 10rem) 2em;
 
 
-        background: hsl(0 0% 100% / 0.1);
+        background: hsl(0 0% 100% / 0.01);
         backdrop-filter: blur(1rem);
 
         transform: translateX(100%);
@@ -153,6 +153,188 @@ body {
     }
 }
 
+/* Content */
+
+.container {
+    flex-flow: column wrap;
+    height: 95%;
+    width:95%;
+    margin: 4em auto;
+    align-items: center;  
+    /*background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.747) 0%,rgba(39, 75, 44, 0.8)  99%);*/
+    background: hsl(0 0% 100% / 0.01);
+    backdrop-filter: blur(1rem);
+
+    border-radius: 10px;
+
+}
+
+
+/* Rain */
+/* 
+
+    
+
+  .rain {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .rain.back-row {
+    display: none;
+    z-index: 1;
+    bottom: 60px;
+    opacity: 0.5;
+  }
+  
+  body.back-row-toggle .rain.back-row {
+    display: block;
+  }
+  
+  .drop {
+    position: absolute;
+    bottom: 100%;
+    width: 15px;
+    height: 120px;
+    pointer-events: none;
+    animation: drop 0.5s linear infinite;
+  }
+  
+  @keyframes drop {
+    0% {
+      transform: translateY(0vh);
+    }
+    75% {
+      transform: translateY(90vh);
+    }
+    100% {
+      transform: translateY(90vh);
+    }
+  }
+  
+  .stem {
+    width: 1px;
+    height: 60%;
+    margin-left: 7px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+    animation: stem 0.5s linear infinite;
+  }
+  
+  @keyframes stem {
+    0% {
+      opacity: 1;
+    }
+    65% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .splat {
+    width: 15px;
+    height: 10px;
+    border-top: 2px dotted rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    animation: splat 0.5s linear infinite;
+    display: none;
+  }
+  
+  body.splat-toggle .splat {
+    display: block;
+  }
+  
+  @keyframes splat {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    90% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+  
+  .toggles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  
+  .toggle {
+    position: absolute;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 51px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  .toggle:active {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .toggle.active {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .splat-toggle {
+    top: 20px;
+  }
+  
+  .back-row-toggle {
+    top: 90px;
+    line-height: 12px;
+    padding-top: 14px;
+  }
+  
+  .single-toggle {
+    top: 160px;
+  }
+  
+  body.single-toggle .drop {
+    display: none;
+  }
+  
+  body.single-toggle .drop:nth-child(10) {
+    display: block;
+  }
+
+
+
+ */
+
 
 
 
@@ -163,4 +345,8 @@ body {
     display: flex;
     gap: var(--gap, 1rem);
 
+}
+
+.white-letter {
+    color:#ffffff;
 }
